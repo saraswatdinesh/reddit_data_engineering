@@ -1,0 +1,45 @@
+[2024-08-15T18:51:34.763+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-15T18:51:34.782+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-08-15T18:51:33.423164+00:00 [queued]>
+[2024-08-15T18:51:34.788+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-08-15T18:51:33.423164+00:00 [queued]>
+[2024-08-15T18:51:34.788+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-15T18:51:34.796+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-08-15 18:51:33.423164+00:00
+[2024-08-15T18:51:34.804+0000] {standard_task_runner.py:64} INFO - Started process 89 to run task
+[2024-08-15T18:51:34.807+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'manual__2024-08-15T18:51:33.423164+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmpc18f7ftc']
+[2024-08-15T18:51:34.811+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask reddit_extraction
+[2024-08-15T18:51:34.863+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction manual__2024-08-15T18:51:33.423164+00:00 [running]> on host 15d5e5353726
+[2024-08-15T18:51:34.933+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Dinesh Saraswat' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-08-15T18:51:33.423164+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-15T18:51:33.423164+00:00'
+[2024-08-15T18:51:34.934+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-15T18:51:34.949+0000] {logging_mixin.py:188} INFO - Connected to reddit!
+[2024-08-15T18:51:35.674+0000] {logging_mixin.py:188} INFO -          id  ... stickied
+0   1esertq  ...    False
+1   1est8pl  ...    False
+2   1esqc5z  ...    False
+3   1esszbv  ...    False
+4   1et17ur  ...    False
+5   1eswldu  ...    False
+6   1esib05  ...    False
+7   1esxs7u  ...    False
+8   1esut7g  ...    False
+9   1et0m9n  ...    False
+10  1esz5fz  ...    False
+11  1esmgne  ...    False
+12  1eswzyv  ...    False
+13  1et1ljx  ...    False
+14  1esoazf  ...    False
+15  1esmezg  ...    False
+16  1esekmm  ...    False
+17  1esbabh  ...    False
+18  1esa0ba  ...    False
+19  1es8sy8  ...    False
+20  1esrc88  ...    False
+21  1esocsy  ...    False
+22  1esnk9i  ...    False
+23  1es9n7a  ...    False
+
+[24 rows x 11 columns]
+[2024-08-15T18:51:35.675+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-15T18:51:35.675+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-15T18:51:35.685+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=manual__2024-08-15T18:51:33.423164+00:00, execution_date=20240815T185133, start_date=20240815T185134, end_date=20240815T185135
+[2024-08-15T18:51:35.719+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-15T18:51:35.735+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-15T18:51:35.736+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
