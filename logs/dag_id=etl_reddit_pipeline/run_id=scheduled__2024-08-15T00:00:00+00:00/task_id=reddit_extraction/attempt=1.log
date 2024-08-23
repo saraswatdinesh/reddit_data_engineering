@@ -1,0 +1,51 @@
+[2024-08-16T00:08:05.595+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-16T00:08:05.619+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-08-15T00:00:00+00:00 [queued]>
+[2024-08-16T00:08:05.626+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-08-15T00:00:00+00:00 [queued]>
+[2024-08-16T00:08:05.626+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-16T00:08:05.636+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): reddit_extraction> on 2024-08-15 00:00:00+00:00
+[2024-08-16T00:08:05.646+0000] {standard_task_runner.py:64} INFO - Started process 92 to run task
+[2024-08-16T00:08:05.650+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_reddit_pipeline', 'reddit_extraction', 'scheduled__2024-08-15T00:00:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/reddit_dag.py', '--cfg-path', '/tmp/tmp5mxqys1c']
+[2024-08-16T00:08:05.653+0000] {standard_task_runner.py:91} INFO - Job 23: Subtask reddit_extraction
+[2024-08-16T00:08:05.741+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_reddit_pipeline.reddit_extraction scheduled__2024-08-15T00:00:00+00:00 [running]> on host 15d5e5353726
+[2024-08-16T00:08:05.953+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Dinesh Saraswat' AIRFLOW_CTX_DAG_ID='etl_reddit_pipeline' AIRFLOW_CTX_TASK_ID='reddit_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-08-15T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-15T00:00:00+00:00'
+[2024-08-16T00:08:05.957+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-16T00:08:06.199+0000] {logging_mixin.py:188} INFO - Connected to reddit!
+[2024-08-16T00:08:21.338+0000] {sessions.py:161} WARNING - Retrying due to ConnectionError(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))) status: GET https://oauth.reddit.com/r/dataengineering/top
+[2024-08-16T00:08:23.787+0000] {logging_mixin.py:188} INFO -          id  ... stickied
+0   1et17ur  ...    False
+1   1est8pl  ...    False
+2   1esqc5z  ...    False
+3   1esszbv  ...    False
+4   1et2pzc  ...    False
+5   1et5f9l  ...    False
+6   1et9kfs  ...    False
+7   1eswldu  ...    False
+8   1eswzyv  ...    False
+9   1esib05  ...    False
+10  1esxs7u  ...    False
+11  1esut7g  ...    False
+12  1et89lu  ...    False
+13  1et1ljx  ...    False
+14  1et0m9n  ...    False
+15  1esz5fz  ...    False
+16  1esmgne  ...    False
+17  1et84gv  ...    False
+18  1et6ujy  ...    False
+19  1et6jdb  ...    False
+20  1et9kvv  ...    False
+21  1et9dfz  ...    False
+22  1et6asf  ...    False
+23  1esoazf  ...    False
+24  1esmezg  ...    False
+25  1eta0w8  ...    False
+26  1esocsy  ...    False
+27  1esnk9i  ...    False
+28  1esrc88  ...    False
+
+[29 rows x 11 columns]
+[2024-08-16T00:08:23.789+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-16T00:08:23.790+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-16T00:08:23.811+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_reddit_pipeline, task_id=reddit_extraction, run_id=scheduled__2024-08-15T00:00:00+00:00, execution_date=20240815T000000, start_date=20240816T000805, end_date=20240816T000823
+[2024-08-16T00:08:23.885+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-08-16T00:08:23.917+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-16T00:08:23.918+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
